@@ -1,10 +1,15 @@
 import { Web3Storage } from "web3.storage";
 import fs from "fs";
 import path from "path";
-
-export async function downloadFile(Web3Storagetoken, cid, downloadLocation) {
+require("dotenv").config({ path: ".env" });
+const WEB3_STORAGE_API_KEY = process.env.WEB3_STORAGE_API_KEY;
+export async function downloadFile(
+  WEB3_STORAGE_API_KEY,
+  cid,
+  downloadLocation
+) {
   const client = new Web3Storage({
-    token: Web3Storagetoken,
+    token: WEB3_STORAGE_API_KEY,
   });
   const res = await client.get(cid);
   const dirPath = downloadLocation;
