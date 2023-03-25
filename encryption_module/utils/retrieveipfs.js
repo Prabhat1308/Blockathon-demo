@@ -1,8 +1,7 @@
 import { Web3Storage } from "web3.storage";
 import fs from "fs";
 import path from "path";
-require("dotenv").config({ path: ".env" });
-const WEB3_STORAGE_API_KEY = process.env.WEB3_STORAGE_API_KEY;
+const WEB3_STORAGE_API_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDU5ODMzMDYwMjllNDQyNGM1MDg1NzUwNmM0MjY4MzhmOEUyMmUxMzIiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2Nzk3NTU2Mzc3NTAsIm5hbWUiOiJzdW1pdCJ9.hEzv-WkFKs6-nH0NoYKxACQFcOlg7mDNQqosVv2T2Nk"
 export async function downloadFile(
   WEB3_STORAGE_API_KEY,
   cid,
